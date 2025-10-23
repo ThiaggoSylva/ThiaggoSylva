@@ -60,7 +60,7 @@ I'm focused on continuous learning, especially in **React, .NET, Python**, and *
 ## 📫 Contact
 📍 **Location:** Brazil  
 💼 **LinkedIn:** [Thiago Silva](https://www.linkedin.com/in/thiago-silva-42583b370)  
-💻 **GitHub:** [ThiaggoSylva]  https://github.com/ThiaggoSylva
+💻 **GitHub:** [ThiaggoSylva](https://github.com/ThiaggoSylva)
 
 ---
 
