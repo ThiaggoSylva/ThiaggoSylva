@@ -1,9 +1,11 @@
+
 name: Generate Trophy
 
 on:
+  workflow_dispatch:
+
   schedule:
     - cron: "0 0 * * *"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,9 +15,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ============================================================
+      # 1. Checkout da branch principal
+      # ============================================================
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # ============================================================
+      # 2. Verificar repositório atual
+      # ============================================================
+      - name: Verificar repositório
+        run: |
+          echo "Repositório:"
+          git remote -v
+
+          echo ""
+          echo "Branch atual:"
+          git branch --show-current
+
+          echo ""
+          echo "Commit atual:"
+          git log -1 --oneline
+
+      # ============================================================
+      # 3. Testar GITHUB_TOKEN
+      #
+      # Não usamos /user porque GITHUB_TOKEN é um token de
+      # instalação do GitHub Actions e não um PAT de usuário.
+      # ============================================================
       - name: Testar GITHUB_TOKEN
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,8 +57,20 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/ThiaggoSylva/ThiaggoSylva
 
-          echo "Token conseguiu acessar o repositório."
+          echo ""
+          echo "GITHUB_TOKEN conseguiu acessar o repositório."
 
+      # ============================================================
+      # 4. Configurar Deno
+      # ============================================================
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      # ============================================================
+      # 5. Gerar trophy.svg
+      # ============================================================
       - name: Generate trophy
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         env:
@@ -46,27 +87,86 @@ jobs:
           margin-width: 10
           margin-height: 10
 
+      # ============================================================
+      # 6. Verificar se o SVG foi realmente criado
+      # ============================================================
       - name: Verify trophy
         run: |
-          if [ ! -s trophy.svg ]; then
-            echo "ERRO: trophy.svg não foi gerado."
+          echo "Conteúdo do diretório:"
+          ls -la
+
+          echo ""
+
+          if [ ! -f trophy.svg ]; then
+            echo "ERRO: trophy.svg não foi criado."
             exit 1
           fi
 
-          echo "trophy.svg gerado:"
+          if [ ! -s trophy.svg ]; then
+            echo "ERRO: trophy.svg foi criado, mas está vazio."
+            exit 1
+          fi
+
+          echo "trophy.svg gerado com sucesso:"
           ls -lh trophy.svg
 
-      - name: Commit trophy
+          echo ""
+          echo "Primeiras linhas do SVG:"
+          head -n 5 trophy.svg
+
+      # ============================================================
+      # 7. Configurar Git
+      # ============================================================
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      # ============================================================
+      # 8. Adicionar trophy.svg
+      # ============================================================
+      - name: Stage trophy
+        run: |
           git add trophy.svg
 
+          echo "Arquivos preparados para commit:"
+          git status --short
+
+      # ============================================================
+      # 9. Criar commit somente se houver alteração
+      # ============================================================
+      - name: Commit trophy
+        run: |
           if git diff --cached --quiet; then
-          echo "Nenhuma alteração no trophy.svg"
-          exit 0
+            echo "Nenhuma alteração no trophy.svg."
+            exit 0
           fi
 
           git commit -m "chore: update GitHub trophy"
-          git push
+
+      # ============================================================
+      # 10. Enviar para main
+      # ============================================================
+      - name: Push trophy
+        run: |
+          git push origin main
+
+          echo ""
+          echo "trophy.svg enviado para a branch main com sucesso."
+
+      # ============================================================
+      # 11. Confirmar arquivo após o push
+      # ============================================================
+      - name: Final verification
+        run: |
+          echo "Workflow concluído."
+          echo ""
+          echo "Arquivo:"
+          echo "trophy.svg"
+          echo ""
+          echo "Branch:"
+          echo "main"
+          echo ""
+          echo "Repositório:"
+          echo "ThiaggoSylva/ThiaggoSylva"
+
