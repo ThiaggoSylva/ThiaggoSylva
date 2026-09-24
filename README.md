@@ -80,10 +80,10 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=ThiaggoSylva&show_icons=true&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF&count_private=true" width="49%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThiaggoSylva&layout=compact&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api?username=ThiaggoSylva&show_icons=true&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF&count_private=true&cache=1" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThiaggoSylva&layout=compact&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&cache=1" width="49%" />
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ThiaggoSylva&theme=dark&background=000000&border=1E90FF&ring=1E90FF&fire=1E90FF&currStreakLabel=1E90FF" width="70%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=ThiaggoSylva&theme=dark&background=000000&border=1E90FF&ring=1E90FF&fire=1E90FF&currStreakLabel=1E90FF&cache=1" width="70%" />
 
 </div>
 
@@ -92,7 +92,7 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
 ## 📈 Activity Graph
 
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ThiaggoSylva&theme=react-dark&bg_color=000000&color=1E90FF&line=1E90FF&point=ffffff&area=true&hide_border=true" width="95%" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ThiaggoSylva&theme=react-dark&bg_color=000000&color=1E90FF&line=1E90FF&point=ffffff&area=true&hide_border=true&cache=1" width="95%" />
 </div>
 
 <br/>
@@ -100,7 +100,7 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
 ## 🏆 Trophies
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=ThiaggoSylva&theme=darkhub&no-frame=true&margin-w=8&column=7" width="95%" />
+<img src="https://github-profile-trophy.vercel.app/?username=ThiaggoSylva&theme=darkhub&no-frame=true&margin-w=8&column=7&cache=1" width="95%" />
 </div>
 
 <br/>
