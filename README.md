@@ -51,24 +51,24 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
   <tr>
     <td width="50%">
       <a href="https://github.com/ThiaggoSylva/delivery-app-2026">
-        <img src="https://github-readme-stats-4kq8joolx-thiaggolsylva-3742.vercel.app/api/pin/?username=ThiaggoSylva&repo=delivery-app-2026&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
+        <img src="https://github-readme-stats-omega-seven-54.vercel.app/api/pin/?username=ThiaggoSylva&repo=delivery-app-2026&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
     </td>
     <td width="50%">
       <a href="https://github.com/ThiaggoSylva/gerador-de-provas-2026">
-        <img src="https://github-readme-stats-4kq8joolx-thiaggolsylva-3742.vercel.app/api/pin/?username=ThiaggoSylva&repo=gerador-de-provas-2026&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
+        <img src="https://github-readme-stats-omega-seven-54.vercel.app/api/pin/?username=ThiaggoSylva&repo=gerador-de-provas-2026&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
     </td>
   </tr>
   <tr>
     <td width="50%">
       <a href="https://github.com/ThiaggoSylva/Desenvolvimento_APIs_Com_Flask">
-        <img src="https://github-readme-stats-4kq8joolx-thiaggolsylva-3742.vercel.app/api/pin/?username=ThiaggoSylva&repo=Desenvolvimento_APIs_Com_Flask&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
+        <img src="https://github-readme-stats-omega-seven-54.vercel.app/api/pin/?username=ThiaggoSylva&repo=Desenvolvimento_APIs_Com_Flask&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
     </td>
     <td width="50%">
       <a href="https://github.com/GuardioesCodigo/GeradorDeCertificados">
-        <img src="https://github-readme-stats-4kq8joolx-thiaggolsylva-3742.vercel.app/api/pin/?username=GuardioesCodigo&repo=GeradorDeCertificados&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
+        <img src="https://github-readme-stats-omega-seven-54.vercel.app/api/pin/?username=GuardioesCodigo&repo=GeradorDeCertificados&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
     </td>
   </tr>
@@ -80,10 +80,10 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
 
 <div align="center">
 
-<img src="https://github-readme-stats-4kq8joolx-thiaggolsylva-3742.vercel.app/api?username=ThiaggoSylva&show_icons=true&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF&count_private=true&cache=1" width="49%" />
-<img src="https://github-readme-stats-4kq8joolx-thiaggolsylva-3742.vercel.app/api/top-langs/?username=ThiaggoSylva&layout=compact&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&cache=1" width="49%" />
+<img src="https://github-readme-stats-omega-seven-54.vercel.app/api?username=ThiaggoSylva&show_icons=true&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF&count_private=true&cache=1" width="49%" />
+<img src="https://github-readme-stats-omega-seven-54.vercel.app/api/top-langs/?username=ThiaggoSylva&layout=compact&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&cache=1" width="49%" />
 
-<img src="https://github-readme-streak-stats-6amsffnh5-thiaggolsylva-3742.vercel.app/?user=ThiaggoSylva&theme=dark&background=000000&border=1E90FF&ring=1E90FF&fire=1E90FF&currStreakLabel=1E90FF&cache=1" width="70%" />
+<img src="https://github-readme-streak-stats-ew7c.vercel.app/?user=ThiaggoSylva&theme=dark&background=000000&border=1E90FF&ring=1E90FF&fire=1E90FF&currStreakLabel=1E90FF&cache=1" width="70%" />
 
 </div>
 
@@ -92,7 +92,7 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
 ## 📈 Activity Graph
 
 <div align="center">
-<img src="https://github-readme-activity-graph-51uulxf2j-thiaggolsylva-3742.vercel.app/graph?username=ThiaggoSylva&theme=react-dark&bg_color=000000&color=1E90FF&line=1E90FF&point=ffffff&area=true&hide_border=true&cache=1" width="95%" />
+<img src="https://github-readme-activity-graph-three-lyart.vercel.app/graph?username=ThiaggoSylva&theme=react-dark&bg_color=000000&color=1E90FF&line=1E90FF&point=ffffff&area=true&hide_border=true&cache=1" width="95%" />
 </div>
 
 <br/>
@@ -100,7 +100,7 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
 ## 🏆 Trophies
 
 <div align="center">
-<img src="https://github-profile-trophy-6flneeeni-thiaggolsylva-3742.vercel.app/?username=ThiaggoSylva&theme=darkhub&no-frame=true&margin-w=8&column=7&cache=1" width="95%" />
+<img src="./trophy.svg" width="95%" />
 </div>
 
 <br/>
