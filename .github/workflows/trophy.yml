@@ -16,12 +16,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Test GitHub API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Testando autenticação do GitHub..."
+
+          curl -fsS \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user
+
+          echo ""
+          echo "API do GitHub respondeu corretamente."
+
       - name: Generate trophy
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        env:
+          GITHUB_TOKEN1: ${{ github.token }}
+          GITHUB_TOKEN2: ${{ github.token }}
         with:
           username: ThiaggoSylva
           token: ${{ github.token }}
           file: ./trophy.svg
+          theme: default
+          max-cols: 6
+          max-rows: 2
+          panel-size: 115
+          margin-width: 10
+          margin-height: 10
+
+      - name: Verify trophy
+        run: |
+          echo "Verificando arquivo..."
+          ls -lh trophy.svg
+
+          if [ ! -s trophy.svg ]; then
+            echo "ERRO: trophy.svg não foi gerado."
+            exit 1
+          fi
+
+          echo "trophy.svg gerado com sucesso."
 
       - name: Commit trophy
         run: |
@@ -35,5 +70,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update trophy"
+          git commit -m "chore: update GitHub trophy"
           git push
