@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: vercel
 
       - name: Generate trophy
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
@@ -38,4 +36,4 @@ jobs:
           fi
 
           git commit -m "Update trophy"
-          git push origin vercel
+          git push
