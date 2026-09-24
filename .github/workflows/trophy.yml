@@ -5,39 +5,37 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Test GitHub API
+      - name: Test GitHub Token
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Testando autenticação do GitHub..."
+          echo "Testando GITHUB_TOKEN..."
 
-          curl -fsS \
+          curl -i \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/user
-
-          echo ""
-          echo "API do GitHub respondeu corretamente."
 
       - name: Generate trophy
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         env:
-          GITHUB_TOKEN1: ${{ github.token }}
-          GITHUB_TOKEN2: ${{ github.token }}
+          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN2: ${{ secrets.GITHUB_TOKEN }}
         with:
           username: ThiaggoSylva
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           file: ./trophy.svg
           theme: default
           max-cols: 6
@@ -48,15 +46,13 @@ jobs:
 
       - name: Verify trophy
         run: |
-          echo "Verificando arquivo..."
-          ls -lh trophy.svg
-
           if [ ! -s trophy.svg ]; then
             echo "ERRO: trophy.svg não foi gerado."
             exit 1
           fi
 
-          echo "trophy.svg gerado com sucesso."
+          echo "trophy.svg gerado:"
+          ls -lh trophy.svg
 
       - name: Commit trophy
         run: |
