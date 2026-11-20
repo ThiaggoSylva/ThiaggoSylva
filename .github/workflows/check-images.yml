@@ -1,0 +1,63 @@
+name: Check README Images
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"  # every Monday 09:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract and verify image URLs
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -u
+          urls=$(grep -oE 'src="https?://[^"]+"' README.md | sed 's/src="//;s/"$//' | sort -u)
+          echo "Found $(echo "$urls" | wc -l) image URLs"
+          failed=""
+          for url in $urls; do
+            code=$(curl -s -o /tmp/img -w "%{http_code}" -L --max-time 30 "$url" || echo "000")
+            ctype=$(file -b --mime-type /tmp/img 2>/dev/null || echo "unknown")
+            size=$(wc -c < /tmp/img 2>/dev/null || echo 0)
+            echo "$code $size $ctype $url"
+            if [ "$code" != "200" ] || [ "$size" -lt 200 ] || ! echo "$ctype" | grep -q "image/"; then
+              failed="${failed}- ${url} (HTTP ${code}, ${size} bytes, ${ctype})\n"
+            fi
+          done
+          if [ -n "$failed" ]; then
+            echo "failed=true" >> $GITHUB_OUTPUT
+            {
+              echo "## Broken README images detected"
+              echo ""
+              echo "The weekly check found the following images that are not rendering correctly:"
+              echo ""
+              printf "%b" "$failed"
+              echo ""
+              echo "Please update the corresponding URLs in README.md."
+            } > /tmp/issue_body.txt
+          else
+            echo "failed=false" >> $GITHUB_OUTPUT
+            echo "All README images are healthy."
+          fi
+
+      - name: Open issue if broken
+        if: steps.check.outputs.failed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Broken image(s) in profile README" \
+            --body-file /tmp/issue_body.txt \
+            --label "bug" 2>/dev/null || \
+          gh issue create \
+            --title "Broken image(s) in profile README" \
+            --body-file /tmp/issue_body.txt
