@@ -53,11 +53,15 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
       <a href="https://github.com/ThiaggoSylva/delivery-app-2026">
         <img src="https://github-stats-extended.vercel.app/api/pin/?username=ThiaggoSylva&repo=delivery-app-2026&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
+      <br/>
+      <sub>Aplicativo de delivery para 2026</sub>
     </td>
     <td width="50%">
       <a href="https://github.com/ThiaggoSylva/gerador-de-provas-2026">
         <img src="https://github-stats-extended.vercel.app/api/pin/?username=ThiaggoSylva&repo=gerador-de-provas-2026&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
+      <br/>
+      <sub>Gerador de provas para 2026</sub>
     </td>
   </tr>
   <tr>
@@ -65,11 +69,15 @@ Trabalho construindo sistemas do backend ao frontend, unindo lógica sólida em 
       <a href="https://github.com/ThiaggoSylva/Desenvolvimento_APIs_Com_Flask">
         <img src="https://github-stats-extended.vercel.app/api/pin/?username=ThiaggoSylva&repo=Desenvolvimento_APIs_Com_Flask&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
+      <br/>
+      <sub>Desenvolvimento de APIs com Flask</sub>
     </td>
     <td width="50%">
       <a href="https://github.com/GuardioesCodigo/GeradorDeCertificados">
         <img src="https://github-stats-extended.vercel.app/api/pin/?username=GuardioesCodigo&repo=GeradorDeCertificados&theme=dark&bg_color=000000&border_color=1E90FF&title_color=1E90FF&text_color=ffffff&icon_color=1E90FF" />
       </a>
+      <br/>
+      <sub>Sistema web para geração de certificados em PDF</sub>
     </td>
   </tr>
 </table>
